@@ -1,3 +1,6 @@
 ./g.adguard
 ./g.easylist
 ./g.easyprivacy
+
+mkdir -p dist
+mv domains.* dist
