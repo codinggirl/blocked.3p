@@ -3,4 +3,6 @@
 ./g.easyprivacy
 
 mkdir -p dist
-mv domains.* dist
+mv domains.adguard dist/adguard.txt
+mv domains.easylist dist/easylist.txt
+mv domains.easyprivacy dist/easyprivacy.txt
