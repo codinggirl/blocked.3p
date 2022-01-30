@@ -1,0 +1,4 @@
+# easylist
+curl -s -L https://easylist.to/easylist/easylist.txt > filter.easylist
+sort -u filter.easylist | grep ^\|\|.*\^$ | grep -v \/ | grep -v \* > filter.easylist.sorted
+sed 's/[\|^]//g' < filter.easylist.sorted > domains.easylist

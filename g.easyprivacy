@@ -1,0 +1,4 @@
+# easyprivacy
+curl -s -L https://easylist.to/easylist/easyprivacy.txt > filter.easyprivacy
+sort -u filter.easyprivacy | grep ^\|\|.*\^$ | grep -v \/ | grep -v \* > filter.easyprivacy.sorted
+sed 's/[\|^]//g' < filter.easyprivacy.sorted > domains.easyprivacy

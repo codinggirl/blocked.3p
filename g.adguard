@@ -1,0 +1,4 @@
+# adguard simplified domain names
+curl -s -L https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt > filter.adguard
+sort -u filter.adguard | grep ^\|\|.*\^$ | grep -v \/ | grep -v \* > filter.adguard.sorted
+sed 's/[\|^]//g' < filter.adguard.sorted > domains.adguard
